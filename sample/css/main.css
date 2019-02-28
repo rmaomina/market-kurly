@@ -1,0 +1,170 @@
+@charset 'utf-8';
+
+#visual{height: 370px; position: relative; top:-46px;}
+	.touch_bullet{position: absolute; top: 329px; left: 50%; margin-left: -52px;}
+	.touch_bullet li{float: left;}
+	.touch_left_btn{position: absolute; top: 50%; left: 250px; margin-top: -25px;}
+	.touch_right_btn{position: absolute; top: 50%; right: 279px; margin-top: -25px;}
+#contents{width:1100px; margin:0 auto;/*  position:relative; top:1px; position:relative; top:1px; */ }
+
+
+/* Swipe 2 required styles */
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > li {
+  float:left;
+  width:100%;
+  position: relative;
+}
+
+/* END required styles */
+#mySwipe img{width:100%; max-width:100%; height:370px;}
+/* #mySwipe02 img{width:100%; max-width:100%; height:370px;} */
+
+
+/* 인기상품 */
+#main_goods{width:100%; height:450px;}
+	#main_goods h2{font-size:25px; text-indent:10px; font-weight:bold; margin-bottom:20px;}
+	.goods_box{width:23%; height:410px; border:1px solid #dddddd; float:left;margin-right:13px}
+	.goods_img01{background:url(../img/main_goods01.png) no-repeat; width:253px; height:340px;}
+	.goods_img02{background:url(../img/main_goods02.jpg) no-repeat; width:253px; height:340px;}
+	.goods_img03{background:url(../img/main_goods03.jpg) no-repeat; width:253px; height:340px;}
+	.goods_img04{background:url(../img/main_goods04.jpg) no-repeat; width:253px; height:340px;}
+	.goods_info{padding:19px;}
+	.goods_info p{font-size:14px; color:#666666;}
+	.goods_info p.strong{font-weight:bold;}
+	.goods_box img{display:none; width:253px; height:340px;}
+	.goods_box:hover img{display:block;}
+
+#contents_top{width:100%; height:500px; margin-top:60px;}
+
+
+/* 자동 롤링 배너와 제어 버튼을 활용한 배너 알림판 */
+#roll_banner_wrap{width: 530px; height: 455px; overflow: hidden; position: relative; float: left; margin-right: 34px;}
+#roll_banner_wrap h3{margin-bottom: 14px; font-size:25px; font-weight:bold; color:#484848;}
+	.roll_btn1, .roll_btn2, .roll_btn3, .roll_btn4,.roll_btn5,.roll_btn6,.roll_btn7{position: absolute; top: 11px; left: 77px;}
+	.roll_btn2{left: 95px;}
+	.roll_btn3{left: 114px;}
+	.roll_btn4{left: 133px;}
+	.roll_btn5{left: 152px;}
+	.roll_btn6{left: 170px;}
+	.roll_btn7{left: 189px;}
+#roll_banner_wrap .ctl_btn{position: absolute; top: 12px; right: 13px;}
+
+
+/* 게시판 탭 메뉴 스타일 */
+#tabmenu{width: 500px; position: relative; margin: 0 auto; background: url(../images/tab_line_bg.gif) 0 0 repeat-x; float: left; height:204px; margin-bottom:10px; border-bottom:1px solid #eeeeee;}
+	#tabmenu h3{ font-size:19px; font-weight:bold; color:#484848;}
+	#tabmenu dt.tab_btn1{margin-bottom: 8px;}
+	#tabmenu dt.tab_btn2{position: absolute; top: 0; left: 104px;}
+	#tabmenu dt.tab_btn3{position: absolute; top: 0; left: 208px;}
+	#tabmenu li{line-height: 28px; position: relative; padding-left: 15px; background: url(../images/main_bullet.png) 7px 8px no-repeat;}
+	#tabmenu span{position: absolute; top: 0; right: 5px;}
+	#tabmenu p.tab_more{position: absolute; top: 1px; right: 3px; }
+	#tabmenu dd{display: none;}
+	#tabmenu dt:first-child+dd{display: block;}
+
+	
+/* 이벤트배너슬라이드 스타일 */
+#event_wrap{width:500px; height:200px; }
+#event_wrap h3{margin-bottom: 14px; font-size:19px; font-weight:bold; float:left; color:#484848;}
+#event_wrap p{float:right; font-size:16px; color:#56297a; 
+margin-top:13px; font-weight:600;}
+#brandVisual{position:relative;width:500px; min-width:500px; margin:38px auto 0px; overflow:hidden; height:200px; background:#8c909c;  cursor:pointer;}
+#brandVisual ul{position:relative; float:left; width:100%; height:200px;}
+#brandVisual li{position:absolute; width:100%; height:200px;}
+#brandVisual li a{display:block; text-indent: -999999px;}
+#brandVisual .visual_0{left:1px; background: url(../img/event01.png) 50% 0 no-repeat;}
+#brandVisual .visual_1{left:100%; background: url(../img/event02.png) 50% 0 no-repeat;}
+#brandVisual .visual_2{left:200%; background: url(../img/event03.png) 50% 0 no-repeat;}
+#brandVisual .visual_3{left:300%; background: url(../img/event04.png) 50% 0 no-repeat;}
+#brandVisual .visual_4{left:400%; background: url(../img/event05.png) 50% 0 no-repeat;}
+#brandVisual .visual_5{left:500%; background: url(../img/event06.png) 50% 0 no-repeat;}
+
+#buttonList:after{content:''; display:block; clear:both;}
+	#buttonList li{background: url(../img/btnVisual.png)0 -16px no-repeat; width:14px; height:15px; float:left; position:relative; left:36%; top:-26px; overflow:hidden; margin:0 5px; cursor:pointer;}
+	#buttonList li.on{background-position:0 0;}
+	#buttonList li a{display:block; text-indent:-999999px;}
+
+#contents_m{width:1600px; height:260px; background:#f6f7f7; margin:0 -251px;}	
+#contents_m ul{padding-top:40px; width:1100px; height:180px; margin:0 auto;}	
+#contents_m ul li{margin-right:15px;}	
+	
+	
+/* 레시피슬라이드 */
+#recipe{height: 378px; width:100%; margin-top:50px; position:relative;}
+	#recipe h3{font-size:25px; font-weight:bold; float:left; margin-bottom:15px; color:#484848;}
+	#recipe a.r_more{font-size:16px; color:#56297a; margin-left:10px; line-height:38px;font-weight:600; }
+.animation_canvas{overflow: hidden;  position: relative; width: 785px; height: 338px; clear:left;}
+
+/* slider panel */
+.slider_panel{width: 3925px; position: relative; }
+.slider_image{float: left; width: 785px; height: 338px;}
+/* .cl{clear:both;} */
+
+/* slider text panel */
+.slider_text_panel{position: absolute; top:44px; left: 830px;}
+.slider_text{position: absolute; width: 200px; height: 339px; border:1px solid #cccccc; padding:0 17px; }
+.slider_text h2{font-size:17px; text-indent:54px; font-weight:600px;  height:20px; padding-top:13px; width:200px;}
+.slider_text p{font-size:12px; margin-top:5px; text-align:center; overflow:hidden;  text-overflow:ellipsis; white-space:nowrap;}
+.slider_text a{width:220px;height:250px;}
+
+/* control panel */
+.control_panel{position: absolute; top: 311px; left: 352px; height: 15px; width:95px; overflow: hidden; }
+.control_button{width: 15px; height: 45px; position: relative; float: left; cursor: pointer; background: url(../img/point_button.png);}
+
+.control_button:hover{top:-16px;}
+.control_button.active{top: -31px;}
+
+
+/* 자동슬라이드 배너를 이용한 베스트 상품 영역 만들기	 */
+#bestbook_zone{overflow: hidden; margin: 40px auto 0px auto;}	
+	#bestbook_zone h3{margin-bottom: 10px; font-size:25px; font-weight:bold; color:#484848;}
+	#best_bg{width: 1058px; height: 243px; padding-top: 18px; position: relative;}
+	#best_bg span, #best_bg span strong{display: block; text-align: center;}
+	#best_bg span strong{color: darkgreen; font-weight: bold;}
+	#best_bg span{padding-top: 6px; font-size:14px; text-indent:23px;}
+	#best_bg .prev_btn{position: absolute; top: 98px; left: 0px; }
+	#best_bg .prev_btn a img {line-height:170px;}
+	#best_bg .next_btn{position: absolute; top: 98px; right: 0px;}
+
+
+/* 하단의 마케팅 영역(지도포함) 스타일 */
+#contents_bottom{padding-bottom: 30px;}
+	#contents_bottom h3{margin-bottom: 15px; font-size:25px; font-weight:bold; color:#555555;}
+	#map_wrap{float: left; margin-right: 56px;}
+	
+#marketing_wrap{float: left;}	
+	#marketing_wrap dl{width: 363px; overflow: hidden;}
+	#marketing_wrap dl.first{margin-bottom: 20px;}
+	#marketing_wrap dt, #marketing_wrap dd{width: 230px; float: right;}
+	#marketing_wrap dt a{color: darkgreen; font-weight: bold;}
+	#marketing_wrap dt{margin-bottom: 15px;}
+	#marketing_wrap dd.img_wrap{width: auto; float: left;}
+	
+#online_wrap{float: right; width:580px;}	
+	#online_wrap li{float:left; height: 105px; border:1px solid #eeeeee; margin-bottom:10px; margin-right:10px;}
+	#online_wrap li.clear{clear:both; float:left;}
+	#online_wrap p{float:left; font-size:17px; line-height:35px; text-indent:20px; color:#56297a; font-weight:600; }
+	
+	#online_wrap h3{float:left;}
+	#online_wrap ul{width: 580px; height:300px; overflow: hidden;}
+	#contents_bottom{width: 100%; overflow: hidden;}
+
+
+/* 팝업창 스타일	 */
+#pop_wrap{position: absolute; top: 220px; left: 100px; z-index: 30; display: none; box-shadow: 0 2px 10px #000000;}
+
+
+
+
+
+
+

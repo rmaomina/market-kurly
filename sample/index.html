@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="google-translate-customization" content="6f1073ba568f1202-9c8990a4b3025b3e-ga74e3ea243d3f01d-14"></meta> <!-- 세계 언어 선택 메타 태그 -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="Generator" content="Notepad++"/>
+<meta name="Author" content="오윤석"/>
+<meta name="keywords" content="Market Kurly" />
+<meta name="Description" content="Market Kurly 메인 페이지에 오신 것을 환영합니다"/>
+<link rel="shortcut icon" href="favicon/favicon.ico"> <!-- 파비콘 -->
+<link rel="apple-touch-icon-precomposed" href="apple-icon.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-icon-114x114.png">
+<title>Market Kurly</title>
+<link rel="stylesheet" type="text/css" href="css/base.css" media="all" />
+<link rel="stylesheet" type="text/css" href="css/main.css" media="all" />
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script> <!-- 제이쿼리 라이이브러리 연동 -->
+
+<script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script> 
+<script type="text/javascript" src="js/swipe.js"></script> <!-- 터치 슬라이드 플러그인 연동 -->
+<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>  <!-- bxSlider 플러그인 연동 -->
+<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.min.js"></script> <!-- UI 플러그인 연동 -->
+<script type="text/javascript" src="js/jquery.cookie.js"></script>  <!-- 쿠키 플러그인 연동 -->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script src="js/DB_springMove_fn.js"></script>	
+
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="js/map.js"></script>
+
+<style>
+	#map-canvas{width: 450px; height: 222px; margin-top: 1px; background-color: #ffffff; border: 1px solid #e0e0e0;}
+</style>
+</head>
+
+
+<body>
+<div id="wrap">
+	<div id="top_event">
+		<div class="event">
+			<div class="close_btn"></div>
+		</div>
+	</div>
+	<div id="header">
+		<div class="head_info">
+			<img src="img/7_clock.png" class="fl" />
+			<p class="txt fl">
+				전국에 계시는 발 빠른 미식가 <!-- <br /> -->
+			</p>	
+			<p class="txt2 fl">	
+				<span>샛별배송</span>을 소개합니다!
+			</p>
+		</div>
+		<h1><a href="#"><img src="img/kurly_logo.png" alt="마켓 컬리" /></a></h1>
+		<dl id="util_menu">
+			<dt class="hide">유틸메뉴</dt>
+			<dd class="clickme fl DB_etc10_1" style="width: 128px;"><img src="img/login_click.png"/></dd>
+			<dd class="util_first">
+				<ul>
+					<li class="login_wrap logtxt"><a href="#">로그인</a>
+						<form action="#" method="post" name="log_f" id="login_f">
+							<fieldset>
+								<legend>로그인</legend>
+								<p class="user_id">
+									<label for="user_id">
+										<img src="img/login_title_id.gif" alt="아이디" />
+									</label>
+									<input type="text" name="user_id" id="user_id"/>
+								</p>
+								<p class="user_pw">
+									<label for="user_pw">
+										<img src="img/login_title_pw.gif" alt="패드워드" />
+									</label>
+									<input type="password" name="user_pw" id="user_pw"/>
+								</p>
+								<p>
+									<input type="checkbox" name="save_id" id="save_id"/>
+									<label for="save_id">비밀번호 저장</label>
+								</p>
+								<p class="log_btn">
+									<input type="image" src="img/login_btn.png" alt="로그인버튼" />
+								</p>
+								<p class="join_btn_wrap">
+									<a href="#">회원가입</a>
+									<a href="#" class="sch_id_btn">아이디/비밀번호찾기</a>
+								</p>
+								<p class="login_close_btn">
+									<a href="#"><img src="img/login_close_btn.png" alt="닫기버튼" /></a>
+								</p>
+							</fieldset>
+						</form>
+					</li>
+					<li class="logtxt"><a href="#">|&nbsp;&nbsp;&nbsp;회원가입</a></li>
+					<!-- <li><a href="#">|&nbsp;&nbsp;&nbsp;고객센터</a></li> -->
+				</ul>
+			</dd>
+			<dd>
+				<ul id="zoom">
+					<li><img src="img/util_zoom_1.gif" alt="" /></li>
+					<li><a href="#" class="zoom_in"><img src="img/util_zoom_2.gif" alt="" /></a></li>
+					<li><a href="#" class="zoom_return"><img src="img/util_zoom_3.gif" alt="" /></a></li>
+					<li><a href="#" class="zoom_out"><img src="img/util_zoom_4.gif" alt="" /></a></li>
+				</ul>
+			</dd>
+			<dd>
+				<a href="#" class="print_btn"><img src="img/util_print.gif" alt="" /></a>
+			</dd>
+			<dd>
+			
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'ko', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>		
+			</dd>
+		</dl><!-- id="util_menu" -->
+		<form action="#" method="get" name="sch_f" id="sch_f">
+			<fieldset>
+				<legend>검색폼</legend>
+				<p>
+					<input type="text" name="keyword" id="keyword" title="검색어입력" />
+					<input type="image" src="img/search-button.png" alt="검색" class="sch_btn"/>
+				</p>
+			</fieldset>
+		</form>
+		<h2 class="hide">메인메뉴</h2>
+		<div id="gnb_wrap">
+			<ul id="gnb">
+				<li class="fir"><a href="#">신선식품</a>
+					<ul class="sub1">
+						<li><a href="#">채소</a></li>
+						<li><a href="#">과일 및 견과</a></li>
+						<li><a href="#">곡류</a></li>
+						<li><a href="#">수산</a></li>
+						<li><a href="#">Premium</a></li>
+					</ul>
+				</li>
+				<li><a href="#">정육/달걀</a>
+					<ul class="sub2">
+						<li><a href="#">소고기</a></li>
+						<li><a href="#">돼지고기</a></li>
+						<li><a href="#">닭고기/달걀</a></li>
+						<li><a href="#">양고기/기타</a></li>
+						<li><a href="#">Premium</a></li>
+					</ul>
+				</li>
+				<li><a href="#">가공식품</a>
+					<ul class="sub3">
+						<li><a href="#">간식/식사대용</a></li>
+						<li><a href="#">면류</a></li>
+						<li><a href="#">물,음료,유제품</a></li>
+						<li><a href="#">건강식품</a></li>
+						<li><a href="#">Premium</a></li>
+					</ul>
+				</li>
+				<li><a href="#">양념/반찬</a>
+					<ul class="sub4">
+						<li><a href="#">장,소스,초</a></li>
+						<li><a href="#">오일</a></li>
+						<li><a href="#">가루,향신료</a></li>
+						<li><a href="#">반찬</a></li>
+						<li><a href="#">Premium</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Home Dining</a>
+					<ul class="sub5">
+						<li><a href="#">혼신마켓</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Deli/Bakery</a>
+					<ul class="sub6">
+						<li><a href="#">빵류</a></li>
+						<li><a href="#">디저트</a></li>
+						<li><a href="#">치즈/버터</a></li>
+						<li><a href="#">육제품</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Daily</a>
+				</li>
+				<li><a href="#">이벤트/기획전</a>
+				</li>
+				<li><a href="#">Best</a>
+				</li>
+				
+			</ul><!-- id="gnb" -->
+		</div> <!-- id="gnb_wrap"> -->
+		<p id="total_btn">
+			<a href="#"><img src="img/btn_all_menu.png" alt="전체 메뉴" /></a>
+		</p>
+		<div id="total_menu">
+			<dl>
+				<dt>신선식품</dt>
+				<dd>
+					<ul>
+						<li><a href="#">채소</a></li>
+						<li><a href="#">과일 및 견과</a></li>
+						<li><a href="#">곡류</a></li>
+						<li><a href="#">수산</a></li>
+						<li><a href="#">Premium</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dd>
+					<ul>
+						<li><a href="#">채소</a></li>
+						<li><a href="#">과일 및 견과</a></li>
+						<li><a href="#">곡류</a></li>
+						<li><a href="#">수산</a></li>
+						<li><a href="#">Premium</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dd>
+					<ul>
+						<li><a href="#">소고기</a></li>
+						<li><a href="#">돼지고기</a></li>
+						<li><a href="#">닭고기/달걀</a></li>
+						<li><a href="#">양고기/기타</a></li>
+						<li><a href="#">Premium</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dd>
+					<ul>
+						<li><a href="#">간식/식사대용</a></li>
+						<li><a href="#">면류</a></li>
+						<li><a href="#">물,음료,유제품</a></li>
+						<li><a href="#">건강식품</a></li>
+						<li><a href="#">Premium</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dd>
+					<ul>
+						<li><a href="#">혼신마켓</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<dl>
+				<dd>
+					<ul>
+						<li><a href="#">빵류</a></li>
+						<li><a href="#">디저트</a></li>
+						<li><a href="#">치즈/버터</a></li>
+						<li><a href="#">육제품</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<p id="total_close"><a href="#"><img src="img/allmenu_close_btn.png" alt="전체메뉴 닫기" /></a></p>
+		</div><!-- id="total_menu" -->
+		<p id="date_wrap">
+			<span class="year">0000</span> 년
+			<span class="month">00</span> 월
+			<span class="date">00</span> 일
+		</p>
+	</div><!-- id="header" -->
+	<hr />
+	
+	
+	<div id="visual">
+		<div id="mySwipe" class="swipe">
+			<ul class="touch_banner swipe-wrap">
+				<li><a href="#"><img src="img/visual01.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="img/visual02.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="img/visual03.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="img/visual04.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="img/visual05.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="img/visual06.jpg" alt="" /></a></li>
+				<li><a href="#"><img src="img/visual07.jpg" alt="" /></a></li>
+			</ul>
+		</div>
+		<ul class="touch_bullet">
+			<li><img src="img/visual_bullet_on.png" class="active" alt="" /></li>
+			<li><img src="img/visual_bullet_off.png" alt="" /></li>
+			<li><img src="img/visual_bullet_off.png" alt="" /></li>
+			<li><img src="img/visual_bullet_off.png" alt="" /></li>
+			<li><img src="img/visual_bullet_off.png" alt="" /></li>
+			<li><img src="img/visual_bullet_off.png" alt="" /></li>
+			<li><img src="img/visual_bullet_off.png" alt="" /></li>
+		</ul>
+		<p class="touch_left_btn">
+			<a href="#"><img src="img/slide-left-button.png" alt="이전 배너" /></a>
+		</p>
+		<p class="touch_right_btn">
+			<a href="#"><img src="img/slide-right-button.png" alt="다음 배너" /></a>
+		</p>
+	</div><!-- id="visual" -->
+	<hr />
+	
+	
+	<div id="contents">
+		<div id="main_goods">
+			<h2>인기상품</h2>
+			<a href="#">
+			<div class="goods_box">
+				<div class="goods_img01">
+					<img src="img/main_goods_op.png" alt="" />
+				</div>
+				<div class="goods_info">
+					<p class="strong">[콜린스그린] 원데이 클렌즈(1일)</p>
+					<p>41,000원</p>
+				</div>
+			</div>
+			</a>
+			<a href="#">
+			<div class="goods_box">
+				<div class="goods_img02">
+					<img src="img/main_goods_op.png" alt="" />
+				</div>
+				<div class="goods_info">
+					<p class="strong">GAP 양광사과</p>
+					<p>8,000원</p>
+				</div>
+			</div>
+			</a>
+			<a href="#">
+			<div class="goods_box">
+				<div class="goods_img03">
+					<img src="img/main_goods_op.png" alt="" />
+				</div>
+				<div class="goods_info">
+					<p class="strong">[MEYER] 한우 채끝등심</p>
+					<p>32,500원</p>
+				</div>
+			</div>
+			</a>
+			<a href="#">
+			<div class="goods_box">
+				<div class="goods_img04">
+					<img src="img/main_goods_op.png" alt="" />
+				</div>
+				<div class="goods_info">
+					<p class="strong">유기농 베이비 채소</p>
+					<p>2,600원</p>
+				</div>
+			</div>
+			</a>
+		</div><!--  id="main_goods"> -->
+		<div id="contents_top">
+			<div id="roll_banner_wrap">
+				<h3>신상품</h3>
+				<dl>
+					<dt class="roll_btn1"><a href="#" class="active"><img src="img/pop_btn_1_over.png" alt="버튼1" /></a></dt>
+					<dd><a href="#"><img src="img/new_goods01.jpg" alt="배너1" /></a></dd>
+					<dt class="roll_btn2"><a href="#"><img src="img/pop_btn_2_out.png" alt="버튼2" /></a></dt>
+					<dd><a href="#"><img src="img/new_goods02.jpg" alt="배너2" /></a></dd>
+					<dt class="roll_btn3"><a href="#"><img src="img/pop_btn_3_out.png" alt="버튼3" /></a></dt>
+					<dd><a href="#"><img src="img/new_goods03.jpg" alt="배너3" /></a></dd>
+					<dt class="roll_btn4"><a href="#"><img src="img/pop_btn_4_out.png" alt="버튼4" /></a></dt>
+					<dd><a href="#"><img src="img/new_goods04.jpg" alt="배너4" /></a></dd>
+					<dt class="roll_btn5"><a href="#"><img src="img/pop_btn_5_out.png" alt="버튼5" /></a></dt>
+					<dd><a href="#"><img src="img/new_goods05.jpg" alt="배너5" /></a></dd>
+					<dt class="roll_btn6"><a href="#"><img src="img/pop_btn_6_out.png" alt="버튼6" /></a></dt>
+					<dd><a href="#"><img src="img/new_goods06.jpg" alt="배너6" /></a></dd>
+					<dt class="roll_btn7"><a href="#"><img src="img/pop_btn_7_out.png" alt="버튼7" /></a></dt>
+					<dd><a href="#"><img src="img/new_goods07.jpg" alt="배너7" /></a></dd>
+				</dl>
+				<p class="ctl_btn">
+					<a href="#" class="stopBtn"><img src="img/pop_btn_stop_on.gif" alt="정지 버튼" /></a>
+					<a href="#" class="playBtn"><img src="img/pop_btn_play_off.gif" alt="재생 버튼" /></a>
+				</p>
+			</div><!-- id="roll_banner_wrap" -->
+
+			<dl id="tabmenu"><!-- 탭 메뉴를 이용해 최근 게시물 리스트 만들기 -->
+				<dt class="tab_btn1"><a href="#"><img src="img/tab_btn_2_over.jpg" alt="무료배송" /></a></dt>
+				<dd>
+					<img src="img/banner01.jpg" alt="Kulry lovers" class="fl" />
+					<p class="tab_more"><a href="#"><img src="img/tab_more_btn.png" alt="더보기" /></a></p>
+				</dd>
+				<dt class="tab_btn2"><a href="#"><img src="img/tab_btn_1_out.jpg" alt="회원혜택" /></a></dt>
+				<dd>
+					<img src="img/banner02.jpg" alt="Kulry lovers" class="fl" />
+					<p class="tab_more"><a href="#"><img src="img/tab_more_btn.png" alt="더보기" /></a></p>
+				</dd>
+				<dt class="tab_btn3"><a href="#"><img src="img/tab_btn_3_out.jpg" alt="가격조정안" /></a></dt>
+				<dd>
+					<img src="img/banner03.jpg" alt="Kulry lovers" class="fl" />
+					<p class="tab_more"><a href="#"><img src="img/tab_more_btn.png" alt="더보기" /></a></p>
+				</dd>
+			</dl><!-- id="tabmenu" -->
+			<div id="event_wrap" class="fl">
+				
+				<div id="brandVisual">
+					<ul>
+						<li class="visual_0"><a href="#">배너이미지1</a></li>
+						<li class="visual_1"><a href="#">배너이미지2</a></li>
+						<li class="visual_2"><a href="#">배너이미지3</a></li>
+						<li class="visual_3"><a href="#">배너이미지3</a></li>
+						<li class="visual_4"><a href="#">배너이미지3</a></li>
+						<li class="visual_5"><a href="#">배너이미지3</a></li>
+					</ul>
+				</div>
+				<ul id="buttonList">
+					<li class="on"><a href="#">배너1</a></li>
+					<li><a href="#">배너2</a></li>
+					<li><a href="#">배너3</a></li>
+					<li><a href="#">배너4</a></li>
+					<li><a href="#">배너5</a></li>
+					<li><a href="#">배너6</a></li>
+				</ul>
+			</div>
+		</div><!-- id="contents_top" -->
+		<!-- <div id="contents_m">
+			<ul>
+				<li class="fl"><a href="#"><img src="img/banner01.jpg"/></a></li>
+				<li class="fl"><a href="#"><img src="img/banner02.jpg"/></a></li>
+				<li class="fl"><a href="#"><img src="img/banner03.jpg"/></a></li>
+				<li class="fl"><a href="#"><img src="img/banner04.jpg"/></a></li>
+			</ul>
+		</div> -->
+		<div id="recipe">
+			<h3>레시피</h3>
+			<a href="#" class="r_more">레시피 전체보기</a>
+			<div class="animation_canvas">
+				<div class="slider_panel">
+					<a href="#"><img src="img/recipe01.png" alt="" class="slider_image" /></a>
+					<a href="#"><img src="img/recipe02.png" alt="" class="slider_image" /></a>
+					<a href="#"><img src="img/recipe03.png" alt="" class="slider_image" /></a>
+					<a href="#"><img src="img/recipe04.png" alt="" class="slider_image cl" /></a>
+					<a href="#"><img src="img/recipe05.png" alt="" class="slider_image" /></a>
+				</div>
+				
+				<div class="control_panel">
+					<div class="control_button"></div>
+					<div class="control_button"></div>
+					<div class="control_button"></div>
+					<div class="control_button"></div>
+					<div class="control_button"></div>
+				</div>
+			</div> <!-- animation_canvas -->
+			<div class="slider_text_panel">
+					<div class="slider_text">
+						<h2>레시피상품</h2>
+						<p class="line"></p>
+						<a href="#"><img src="img/r_goods01.png" alt="" /></a>
+						<p>[프루네티]레제로 프리미엄 엑스트라 버진 오일</p>
+						<p>32,900</p>
+					</div>
+					<div class="slider_text">
+						<h2>레시피상품</h2>
+						<p class="line"></p>
+						<a href="#"><img src="img/r_goods02.png" alt="" /></a>
+						<p>[크림치즈]마담로익 4종</p>
+						<p>11,900원</p>
+					</div>
+					<div class="slider_text">
+						<h2>레시피상품</h2>
+						<p class="line"></p>
+						<a href="#"><img src="img/r_goods03.png" alt="" /></a>
+						<p>[데체코]엑스트라버진 올리브 오일</p>
+						<p>10,800원</p>
+					</div>
+					<div class="slider_text">
+						<h2>레시피상품</h2>
+						<p class="line"></p>
+						<a href="#"><img src="img/r_goods04.png" alt="" /></a>
+						<p>[선솔트] 머레이리버 고메 핑크솔트</p>
+						<p>18,800원</p>
+					</div>
+					<div class="slider_text">
+						<h2>레시피상품</h2>
+						<p class="line"></p>
+						<a href="#"><img src="img/r_goods05.png" alt="" /></a>
+						<p>[소프트] 카망베르 치즈 2종</p>
+						<p>14,900원</p>
+					</div>
+					
+			</div><!-- class="slider_text_panel"> -->
+		</div><!-- id="recipe" -->
+		<!-- 자동 슬라이드 배너를 이용한 베스트 BOOK 영역 만들기 -->
+		<div id="bestbook_zone">
+			<h3>신선 계절 상품</h3>
+			<div id="best_bg">
+				<ul>
+					<li><a href="#"><img src="img/fruit01.png" alt="" />
+						<span>바나나</span>
+					</a></li>
+					<li><a href="#"><img src="img/fruit02.png" alt="" />
+						<span>레몬</span>
+					</a></li>
+					<li><a href="#"><img src="img/fruit03.png" alt="" />
+						<span>참외</span>
+					</a></li>
+					<li><a href="#"><img src="img/fruit04.png" alt="" />
+						<span>샐러드</span>
+					</a></li>
+					<li><a href="#"><img src="img/fruit05.png" alt="" />
+						<span>블루베리</span>
+					</a></li>
+					<li><a href="#"><img src="img/fruit06.png" alt="" />
+						<span>포도</span>
+					</a></li>
+					<li><a href="#"><img src="img/fruit07.png" alt="" />
+						<span>가지</span>
+					</a></li>
+					<li><a href="#"><img src="img/fruit08.png" alt="" />
+						<span>브로콜리</span>
+					</a></li>
+					<li><a href="#"><img src="img/fruit09.png" alt="" />
+						<span>귤</span>
+					</a></li>
+					<li><a href="#"><img src="img/fruit10.png" alt="" />
+						<span>사과</span>
+					</a></li>
+					
+
+				</ul>
+				<p class="prev_btn"><a href="#"><img src="img/slide-sub-left-button-black.png" alt="이전으로 이동" /></a></p>
+				<p class="next_btn"><a href="#"><img src="img/slide-sub-right-button-black.png" alt="다음으로 이동" /></a></p>
+			</div><!-- id="best_bg" -->
+		</div><!-- id="bestbook_zone" -->
+		
+		<div id="contents_bottom">
+			<div id="map_wrap">
+				<h3>오시는 길</h3>
+				<div id="map-canvas" title="찾아오시는 길"></div>
+			</div><!-- id="map_wrap" -->
+			<!-- <div id="marketing_wrap">
+				<h3><img src="images/maket_title.gif" alt="마케팅" /></h3>
+				<dl class="first">
+					<dt><a href="#">Do it! HTML5+CSS3 웹 표준의 정석 동영상 강좌</a></dt>
+					<dd class="img_wrap"><a href="#"><img src="images/maket_img_1.gif" alt="" /></a></dd>
+					<dd><a href="#">기초부터 반응형 웹까지! HTML5 권위자에게 정석으로...</a></dd>
+				</dl>
+				<dl class="first">
+					<dt><a href="#">Do it! 안드로이드 앱 프로그래밍 진도표와 동영상 강좌</a></dt>
+					<dd class="img_wrap"><a href="#"><img src="images/maket_img_2.gif" alt="" /></a></dd>
+					<dd><a href="#">처음부터 끝까지 보기 조차 힘든 초보자를 위해 섹션별 난이도를 표시해 놓았습니다.</a></dd>
+				</dl>
+			</div><!-- id="marketing_wrap" -->
+			<div id="online_wrap">
+				<h3>Kurly Loves</h3>
+				<p>| Partners</p>
+				<ul>
+					<li class="fl"><a href="#"><img src="img/online_banner01.png" alt="배너1" title="커피리브레" /></a></li>
+					<li class="fl"><a href="#"><img src="img/online_banner02.png" alt="배너2" title="비스테카" /></a></li>
+					
+					<li class="fl"><a href="#"><img src="img/online_banner03.png" alt="배너3" title="오뗄두스"/></a></li>
+					<li class="clear"><a href="#"><img src="img/online_banner05.png" alt="배너4"title="콜린스그린" /></a></li>
+					
+					<li class="fl"><a href="#"><img src="img/online_banner04.png" alt="배너5" title="르까도드마비"/></a></li>
+					<li class="fl"><a href="#"><img src="img/online_banner06.png" alt="배너6"title="본앤브레드" /></a></li>
+				</ul>
+			</div><!-- id="online_wrap" -->
+		</div>
+		<div id="quick_menu">
+			<h3>
+				<a href="#">배송안내
+					<img src="img/icon-truck.png" alt="배송안내" /></a>
+			</h3>
+			<ul>
+				<li><a href="#">신상품</a></li>
+				<li><a href="#">알뜰쇼핑</a></a></li>
+				<li><a href="#">베스트 구매후기</a></li>
+				<li><a href="">늘 사는것</a></li>
+				<li><a href="#">장바구니(0)</a></li>
+				<li><a href="#">Kurly Loves</a></li>
+				<li><a href="#">Kurly Recipe</a></li>
+				<li class="last">
+					<a href="#top" class="fl qucik_btn"><img src="img/quick_up.png" alt="위로" /></a>
+					<a href="#footer_wrap"class="fl qucik_btn"><img src="img/quick_down.png" alt="아래로" /></a>
+				</li>
+			</ul>
+		</div><!-- id="quick_menu" -->
+		<p id="pop_wrap">
+			<img src="img/popup.png" alt="컬리를 가장 쉽고 편하게 이용하는 방법!" usemap="#pop" />
+			<map name="pop" id="pop">
+				<area shape="rect" coords="322,397,359,413" href="#" alt="창닫기" />
+				<area shape="rect" coords="161,396,289,418" href="#" alt="하루동안 창 닫기" />
+			</map>
+		</p>
+	</div><!-- id="contents" -->
+</div><!-- id="wrap" -->
+<hr />
+
+
+<div id="footer_wrap">
+
+	<div id="happy_call">
+		<div class="wrap01 fl">
+			<p>고객행복센터</p> <br />
+			<p>1644-1107</p>
+		</div>
+		<div class="wrap02 fl">
+				<p>AM 9:00 ~PM 04:00 / <strong>Lunch</strong> PM 12:00 ~ PM 01:00 / <strong>SATURDAY</strong> AM 09:00 ~ PM 12:00 /</p> <br />
+				<p>고객센터가 종료된 오후 4시 이후와 일요일, 공휴일에는 1:1 문의하기 게시판을 이용해주세요.</p>
+		</div>
+	</div> <!-- id="happy_call"> -->
+
+	<div id="inner_footer">
+		<h3 class="footer_logo">
+			<a href="#"><img src="img/footer_logo.jpg" alt="교보문고 온라인 서점" /></a>
+		</h3>
+		<dl id="bottom_menu">
+			<dt class="hide">하단메뉴</dt>
+			<dd><a href="#">컬리소개</a></dd>
+			<dd><a href="#">컬리영상소개</a></dd>
+			<dd><a href="#">컬리1주년</a></dd>
+			<dd><a href="#">이용안내</a></dd>
+			<dd><a href="#">개인정보취급방침</a></dd>
+		</dl>
+		<div id="relSite_wrap">
+			<h3>Kurly Partners</h3>
+			<form action="#" method="get" name='rel_f'>
+				<fieldset>
+					<legend>관련 사이트 이동</legend>
+					<select name="rel_select">
+						<option value="http://coffeelibre.kr/">커피 리브레</option>
+						<option value="http://www.johncookdelimeats.com/">델리미트</option>
+						<option value="http://www.bistecca.co.kr/">비스테카</option>
+						<option value="http://www.bistecca.co.kr/">콜린스그린</option>
+						<option value="http://www.bistecca.co.kr/">오뗄두스</option>
+						<option value="http://www.bistecca.co.kr/">본앤브레드</option>
+					</select>
+					<input type="image" src="img/rel_site_btn.gif" alt="관련 사이트 이동" />
+				</fieldset>
+			</form>
+		</div><!-- id="relSite_wrap" -->
+		<address>
+			<div class="ellipsis">법인명(상호): 주식회사 더파머스 |대표자(성명):김슬아 대표 | 개인정보관리책임자 : 박길남(help@kurlycorp.com)</div> <!-- <br /> -->
+			<div class="ellipsis">상표등록번호:231-81-23567 [사업자 정보확인] 통신판매업: 제2015-서울서초-0954호</div><!-- <br /> -->
+			<div class="ellipsis">입점문의: partners@kurlycorp.com | 마케팅제휴:marketing@kurlycorp.com | 채용문의:recruit@kurlycorp.com |팩스:070-7500-6059</div> <!-- <br /> -->
+			<div class="ellipsis">주소: 서울특벽시 서초구 강남대로 557 (성한빌딩)9층
+				&copy;MARKET KURLY ALL RESERVED.</div>
+		</address>
+	</div><!-- id="inner_footer" -->
+</div><!-- id="footer_wrap" -->
+	
+<script> 
+	$('.DB_etc10_1').DB_springMove({
+		key:'e24102',                //라이센스키
+		dir:'x',               //방향축('x','y')
+		mirror:1,              //반대방향이동(1,-1)
+		radius:10,             //반경
+		motionSpeed:0.1       //속도(0~1)
+	})
+
+</script>	
+</body>
+</html>
+
+
+
+
+
+
+
+
+

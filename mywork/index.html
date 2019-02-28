@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Referrer" content="origin">
+    <meta name="referrer" contents="always"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="robots" content="index,nofollow">
+    <meta name="description" content="마켓컬리 홈페이지입니다.">
+    <meta name="author" content="Kurly">
+    <meta name="keywords" content="Kurly"> 
+    <title>마켓컬리</title>
+    <meta property="og:title" content="마켓컬리"> 
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="마켓컬리 홈페이지입니다.">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <!-- 헤더 -->
+        <div class="top-banner">
+            <div class="box-1280">
+                <a href="#"><span>지금 가입하고 <span class="bold">축하선물</span> 받아가세요!</span></a>
+                <a class="msg-close hidden-text" href="#">이 메세지 다시 안보기</a>
+            </div>
+        </div>
+        <div class="header">
+            <div class="box-1280 clearfix">
+                <div class="tooltip">
+                    <div class="tooltip-box">
+                        <span>회원가입하면<br>3,000포인트 적립!</span>
+                    </div>
+                    <div class="tooltip-shadow"></div>
+                </div>
+                <ul class="gnb-menu">
+                    <li><a href="#">회원가입</a></li>
+                    <li><a class="btn-login-open" href="#">로그인</a>
+                        <div class="login-box">
+                            <div class="tip"></div>
+                            <form action="">
+                                <fieldset>
+                                    <legend class="label-hidden">회원 로그인</legend>
+                                    <div class="form-group">
+                                        <input class="form" type="text" placeholder="아이디">
+                                        <input class="form" type="password" placeholder="비밀번호">
+                                        <input class="btn-login" type="button" value="로그인">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="checkbox" checked>
+                                            <input type="checkbox">
+                                            <span class="label">비밀번호 저장</span>
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <a href="#">회원가입</a> | <a href="#">아이디/비밀번호 찾기</a>
+                                        <a href="#" class="btn-login-close" onclick="toggleLogin();">CLOSE</a>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </li>
+                    <li><a href="#">고객센터<span class="icon-gnb-down"></span></a>
+                        <ul class="gnb-sub">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">자주하는질문</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">대량주문문의</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">배송지역검색</a></li>
+                </ul>
+                <div class="banner-area">
+                    <img src="./assets/img/banner/banner-delivery.gif" alt="20시까지 주문시, 다음날 도착">
+                </div>
+                <div class="logo-area">
+                    <h1><a href="#"><img src="./assets/img/logo/kurly-logo.png" alt="kurlyLogo"></a><span>마켓컬리</span></h1>
+                </div>
+            </div>
+        </div>
+        <!-- 네비게이션 메뉴 -->
+        <div class="navbar clearfix">
+            <div class="box-1280">
+                <ul class="nav-item clearfix">
+                    <li class="btn-cg"><a href="#"><span class="icon-category"></span>전체 카테고리</a>
+                        <!-- 카테고리 확장 메뉴 -->
+                        <div class="category-items clearfix">
+                            <dl>
+                                <dt><a href="#"><div class="icon-dt"></div>신선식품</a></dt>
+                                <dd><a href="#">채소</a></dd>
+                                <dd><a href="#">과일 및 견과</a></dd>
+                                <dd><a href="#">곡류</a></dd>
+                                <dd><a href="#">수산</a></dd>
+                                <dd><a href="#">Premium</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#"><div class="icon-dt"></div>정육/달걀</a></dt>
+                                <dd><a href="#">소고기</a></dd>
+                                <dd><a href="#">돼지고기</a></dd>
+                                <dd><a href="#">닭/오리고기</a></dd>
+                                <dd><a href="#">달걀</a></dd>
+                                <dd><a href="#">양고기</a></dd>
+                                <dd><a href="#">양념육/돈가스</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#"><div class="icon-dt"></div>가공식품</a></dt>
+                                <dd><a href="#">선식/시리얼/그래놀라</a></dd>
+                                <dd><a href="#">샐러드/도시락</a></dd>
+                                <dd><a href="#">죽/스프</a></dd>
+                                <dd><a href="#">즉석면/즉석밥/볶음밥</a></dd>
+                                <dd><a href="#">만두/피자/떡볶이</a></dd>
+                                <dd><a href="#">기타 간편식</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#"><div class="icon-dt"></div>양념/반찬</a></dt>
+                                <dd><a href="#">김치/장아찌</a></dd>
+                                <dd><a href="#">밑반찬</a></dd>
+                                <dd><a href="#">국/찌개/탕</a></dd>
+                                <dd><a href="#">두부/어묵</a></dd>
+                                <dd><a href="#">햄/소시지/통조림</a></dd>
+                                <dd><a href="#">메인요리</a></dd>
+                            </dl>
+                            <dl>
+                                <dt><a href="#"><div class="icon-dt"></div>홈 다이닝</a></dt>
+                                <dd><a href="#">주방용품</a></dd>
+                                <dd><a href="#">테이블웨어</a></dd>
+                                <dd><a href="#">세제/생활용품</a></dd>
+                                <dd><a href="#">홈 데코</a></dd>
+                            </dl>
+                            <dl style="clear:both;">
+                                <dt><a href="#"><div class="icon-dt"></div>델리/베이커리</a></dt>
+                                <dd><a href="#">빵/잼</a></dd>
+                                <dd><a href="#">디저트/케이크</a></dd>
+                                <dd><a href="#">올리브/안티파스토</a></dd>
+                                <dd><a href="#">치즈/버터</a></dd>
+                                <dd><a href="#">델리미트</a></dd>
+                            </dl>
+                        </div><!-- //카테고리 확장 메뉴 -->
+                    </li>
+                    <li><a href="#">신상품</a></li>
+                    <li><a href="#">인기상품</a></li>
+                    <li><a href="#">알뜰쇼핑</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+                <div class="searchbar">
+                    <form action="">
+                    <input type="text" placeholder="컬리의 반찬큐레이션"><a href="#" class="icon-search">검색하기</a>
+                    </form>
+                </div>
+                <div class="cart"><a href="#" class="icon-cart">장바구니</a><span class="bedge">3</span></div>
+                
+            </div>
+        </div><!-- //네비게이션 메뉴 -->
+        <div class="container">
+            <!-- 슬라이드 이미지 -->
+            <div class="carousel">
+                <ul class="carousel-imgs">
+                    <li class="active">
+                        <img src="./assets/img/carousel/visual1.jpg" alt="슬라이드이미지1">
+                    </li>
+                    <li>
+                        <img src="./assets/img/carousel/visual2.jpg" alt="슬라이드이미지2">
+                    </li>
+                    <li>
+                        <img src="./assets/img/carousel/visual3.jpg" alt="슬라이드이미지3">
+                    </li>
+                    <li>
+                        <img src="./assets/img/carousel/visual4.jpg" alt="슬라이드이미지4">
+                    </li>
+                    <li>
+                        <img src="./assets/img/carousel/visual5.jpg" alt="슬라이드이미지5">
+                    </li>
+                    <li>
+                        <img src="./assets/img/carousel/visual6.jpg" alt="슬라이드이미지6">
+                    </li>
+                    <li>
+                        <img src="./assets/img/carousel/visual7.jpg" alt="슬라이드이미지7">
+                    </li>
+                    <li>
+                        <img src="./assets/img/carousel/visual8.jpg" alt="슬라이드이미지8">
+                    </li>
+                </ul>
+                <ul class="carousel-desc">
+                    <li class="active">
+                        <p>[친구초대 이벤트 1]</p>
+                        <p class="c-title">1. 컬리를 친구에게 소개해 주세요!<br><span class="strong">1. 컬친소 EVENT</span></p>
+                        <p><a href="#">1. 친구 초대하고 적립금 함께 받으러 가기!</a></p>
+                    </li>
+                    <li>
+                        <p>[친구초대 이벤트 2]</p>
+                        <p class="c-title">2. 컬리를 친구에게 소개해 주세요!<br><span class="strong">2. 컬친소 EVENT</span></p>
+                        <p><a href="#">2. 친구 초대하고 적립금 함께 받으러 가기!</a></p>
+                    </li>
+                    <li>
+                        <p>[친구초대 이벤트 3]</p>
+                        <p class="c-title">3. 컬리를 친구에게 소개해 주세요!<br><span class="strong">3. 컬친소 EVENT</span></p>
+                        <p><a href="#">3. 친구 초대하고 적립금 함께 받으러 가기!</a></p>
+                    </li>
+                    <li>
+                        <p>[친구초대 이벤트 4]</p>
+                        <p class="c-title">4. 컬리를 친구에게 소개해 주세요!<br><span class="strong">4. 컬친소 EVENT</span></p>
+                        <p><a href="#">4. 친구 초대하고 적립금 함께 받으러 가기!</a></p>
+                    </li>
+                    <li>
+                        <p>[친구초대 이벤트 5]</p>
+                        <p class="c-title">5. 컬리를 친구에게 소개해 주세요!<br><span class="strong">5. 컬친소 EVENT</span></p>
+                        <p><a href="#">5. 친구 초대하고 적립금 함께 받으러 가기!</a></p>
+                    </li>
+                    <li>
+                        <p>[친구초대 이벤트 6]</p>
+                        <p class="c-title">6. 컬리를 친구에게 소개해 주세요!<br><span class="strong">6. 컬친소 EVENT</span></p>
+                        <p><a href="#">6. 친구 초대하고 적립금 함께 받으러 가기!</a></p>
+                    </li>
+                    <li>
+                        <p>[친구초대 이벤트 7]</p>
+                        <p class="c-title">7. 컬리를 친구에게 소개해 주세요!<br><span class="strong">7. 컬친소 EVENT</span></p>
+                        <p><a href="#">7. 친구 초대하고 적립금 함께 받으러 가기!</a></p>
+                    </li>
+                    <li>
+                        <p>[친구초대 이벤트 8]</p>
+                        <p class="c-title">8. 컬리를 친구에게 소개해 주세요!<br><span class="strong">8. 컬친소 EVENT</span></p>
+                        <p><a href="#">8. 친구 초대하고 적립금 함께 받으러 가기!</a></p>
+                    </li>
+                </ul>
+                <div class="slide-btns">
+                    <a href="#" class="btn-prev hidden-text">이전 슬라이드 보기</a>
+                    <a href="#" class="btn-next hidden-text">다음 슬라이드 보기</a>
+                </div>
+            </div><!-- //슬라이드 이미지 -->
+            <!-- MD 추천 -->
+            <div class="box-1060">
+                <div class="subtitle">
+                    <h2>MD 추천<span class="subinfo"> | MD's choice</span></h2>
+                </div>
+                <div class="clearfix">
+                    <div class="product-item">
+                        <a href="#">
+                            <img src="./assets/img/dummy/main-goods1.jpg" width="100%" alt="상품이미지1">
+                            <div class="product-info"><p class="bold ellipsis">[콜린스그린] 원데이 클렌즈(1일)가나다라마바사아자차카타파바아아아</p>9,000원</div>
+                        </a>
+                        <div class="product-dim">원데이 클렌즈(1일)<p class="btn-more"><a href="#">자세히보기</a></p></div>
+                    </div>
+                    <div class="product-item">
+                        <a href="#">
+                            <img src="./assets/img/dummy/main-goods2.jpg" width="100%" alt="상품이미지2">
+                            <div class="product-info"><p class="bold ellipsis">[GAP] 양광사과</p>7,000원</div>
+                        </a>
+                        <div class="product-dim">양광사과<p class="btn-more"><a href="#">자세히보기</a></p></div>
+                    </div>
+                    <div class="product-item">
+                        <a href="#">
+                            <img src="./assets/img/dummy/main-goods3.jpg" width="100%" alt="상품이미지3">
+                            <div class="product-info"><p class="bold ellipsis">[MEYER] 한우 채끝등심</p>330,000원</div>
+                        </a>
+                        <div class="product-dim">한우 채끝등심<p class="btn-more"><a href="#">자세히보기</a></p></div>
+                    </div>
+                    <div class="product-item">
+                        <a href="#">
+                            <img src="./assets/img/dummy/main-goods4.jpg" width="100%" alt="상품이미지4">
+                            <div class="product-info"><p class="bold ellipsis">유기농 베이비 채소</p>15,000원</div>
+                        </a>
+                        <div class="product-dim">유기농 베이비 채소<p class="btn-more"><a href="#">자세히보기</a></p></div>
+                    </div>
+                </div>
+            </div><!-- //MD 추천 -->
+            <!-- 신상품 -->
+            <div class="box-1060 clearfix">
+                <div class="subtitle">
+                    <h2>신상품<span class="subinfo"> | Kurly's new</span></h2>
+                </div>
+                <div class="box-half">
+                    <ul class="slide-new">
+                        <li class="active"><a href="#"><img src="./assets/img/dummy/new-goods1.jpg" alt="신상품이미지1"></a></li>
+                        <li><a href="#"><img src="./assets/img/dummy/new-goods2.jpg" alt="신상품이미지2"></a></li>
+                        <li><a href="#"><img src="./assets/img/dummy/new-goods3.jpg" alt="신상품이미지3"></a></li>
+                        <li><a href="#"><img src="./assets/img/dummy/new-goods4.jpg" alt="신상품이미지4"></a></li>
+                        <li><a href="#"><img src="./assets/img/dummy/new-goods5.jpg" alt="신상품이미지5"></a></li>
+                        <li><a href="#"><img src="./assets/img/dummy/new-goods6.jpg" alt="신상품이미지6"></a></li>
+                    </ul>
+                    <div class="slide-new-nav clearfix">
+                        <div class="nav-dot active"></div>
+                        <div class="nav-dot"></div>
+                        <div class="nav-dot"></div>
+                        <div class="nav-dot"></div>
+                        <div class="nav-dot"></div>
+                        <div class="nav-dot"></div>
+                    </div>
+                </div>
+                <div class="box-half">
+                    <div class="tabSet">
+                        <ul class="tabs clearfix">
+                            <li class="on"><a href="#panel1-1" >무료배송</a></li>
+                            <li><a href="#panel1-2">회원혜택</a></li>
+                            <li><a href="#panel1-3">가격조정안</a></li>
+                        </ul>
+                        <a class="btn-panel-more hidden-text" href="#">더보기</a>
+                        <div class="panels">
+                            <div class="panel active" id="panel1-1">
+                                <p class="tab-title">컬리패스란?</p>
+                                <p>실 결제액 9,800원 이상 결제 시, 무료배송 혜택 제공</p>
+                                <p class="info-small">※실 결제 금액은 쿠폰, 적립금, 할인금액을 제외한 금액입니다.</p>
+                                <a class="btn-kurlypass" href="#">샛별박스 + 컬리패스</a>
+                            </div>
+                            <div class="panel" id="panel1-2">
+                                <p class="tab-title">Kurly Lover?</p>
+                                <p>실 결제액 9,800원 이상 결제 시, 무료배송 혜택 제공</p>
+                                <p class="info-small">※실 결제 금액은 쿠폰, 적립금, 할인금액을 제외한 금액입니다.</p>
+                                <a class="btn-kurlypass" href="#">나의 실 결제금액보기</a>
+                            </div>
+                            <div class="panel" id="panel1-3">
+                                <div class="panel-table">
+                                    <table>
+                                        <caption class="table-hidden">가격변동테이블</caption>
+                                        <thead>
+                                            <tr>
+                                                <th>No.</th>
+                                                <th>항목</th>
+                                                <th>기존</th>
+                                                <th>변동액</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>01</td>
+                                                <td>아스파라거스</td>
+                                                <td>4,800원</td>
+                                                <td>4,800원</td>
+                                            </tr>
+                                            <tr>
+                                                <td>02</td>
+                                                <td>유기농 베이비 채소</td>
+                                                <td>3,300원</td>
+                                                <td>2,600원</td>
+                                            </tr>
+                                            <tr>
+                                                <td>03</td>
+                                                <td>어얼스 멜론</td>
+                                                <td>2,800원</td>
+                                                <td>1,800원</td>
+                                            </tr>
+                                            <tr>
+                                                <td>04</td>
+                                                <td>무농약 양파 1KG</td>
+                                                <td>13,500원</td>
+                                                <td>13,000원</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shortcut clearfix">
+                        <div class="shortcut-icon"><a href="#" class="icon-pass hidden-text">컬리패스</a><p>9,800원 이상</p><p class="bold">무제한 무료배송</p></div>
+                        <div class="shortcut-icon"><a href="#" class="icon-lovers hidden-text">회원혜택</a><p>구매 금액별</p><p class="bold">회원 혜택</p></div>
+                        <div class="shortcut-icon"><a href="#" class="icon-price hidden-text">가격조정</a><p>장바구니 필수품</p><p class="bold">가격조정안</p></div>
+                    </div>
+                </div>
+            </div><!-- //신상품 -->
+            <!-- 인기상품 -->
+            <div class="full-bg">
+                <div class="box-1060">
+                    <div class="subtitle">
+                        <h2>인기상품<span class="subinfo"> | Kurly's favorite</span></h2>
+                    </div>
+                    <div class="clearfix">
+                        <div class="product-item">
+                            <a href="#">
+                                <img src="./assets/img/dummy/main-goods1.jpg" width="100%" alt="상품이미지1">
+                                <div class="product-info"><p class="bold ellipsis">[콜린스그린] 원데이 클렌즈(1일)가나다라마바사아자차카타파바아아아</p>9,000원</div>
+                            </a>
+                            <div class="product-dim">원데이 클렌즈(1일)<p class="btn-more"><a href="#">자세히보기</a></p></div>
+                        </div>
+                        <div class="product-item">
+                            <a href="#">
+                                <img src="./assets/img/dummy/main-goods2.jpg" width="100%" alt="상품이미지2">
+                                <div class="product-info"><p class="bold ellipsis">[GAP] 양광사과</p>7,000원</div>
+                            </a>
+                            <div class="product-dim">양광사과<p class="btn-more"><a href="#">자세히보기</a></p></div>
+                        </div>
+                        <div class="product-item">
+                            <a href="#">
+                                <img src="./assets/img/dummy/main-goods3.jpg" width="100%" alt="상품이미지3">
+                                <div class="product-info"><p class="bold ellipsis">[MEYER] 한우 채끝등심</p>330,000원</div>
+                            </a>
+                            <div class="product-dim">한우 채끝등심<p class="btn-more"><a href="#">자세히보기</a></p></div>
+                        </div>
+                        <div class="product-item">
+                            <a href="#">
+                                <img src="./assets/img/dummy/main-goods4.jpg" width="100%" alt="상품이미지4">
+                                <div class="product-info"><p class="bold ellipsis">유기농 베이비 채소</p>15,000원</div>
+                            </a>
+                            <div class="product-dim">유기농 베이비 채소<p class="btn-more"><a href="#">자세히보기</a></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- //인기상품 -->
+            <!-- 레시피 -->
+            <div class="box-1060 clearfix">
+                <div class="subtitle">
+                    <h2>레시피<span class="subinfo"> | <a class="bold" href="#">레시피 전체보기</a></span></h2>
+                </div>
+                <div class="recipe-slide">
+                    <ul>
+                        <li>
+                            <img src="./assets/img/dummy/recipe-img1.jpg" alt="레시피이미지1">
+                        </li>
+                        <li>
+                            <img src="./assets/img/dummy/recipe-img2.jpg" alt="레시피이미지2">
+                        </li>
+                        <li>
+                            <img src="./assets/img/dummy/recipe-img3.jpg" alt="레시피이미지3">
+                        </li>
+                    </ul>
+                    <div class="recipe-btns">
+                        <a href="#" class="btn-prev hidden-text">이전 슬라이드 보기</a>
+                        <a href="#" class="btn-next hidden-text">다음 슬라이드 보기</a>
+                    </div>
+                </div>
+                <div class="recipe-product">
+                    <h3>레시피 상품</h3>
+                    <ul class="food-slide">
+                        <li class="active">
+                            <img src="./assets/img/dummy/r-goods01.png" alt="레시피제품이미지1">
+                            <p class="food-name bold ellipsis">[웨이트로즈] 1.엑스트라 버진 리미티드 상품</p>
+                            <p>900원</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/dummy/r-goods02.png" alt="레시피제품이미지2">
+                            <p class="food-name bold ellipsis">[웨이트로즈] 2.엑스트라 버진 상품</p>
+                            <p>15,900원</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/dummy/r-goods03.png" alt="레시피제품이미지3">
+                            <p class="food-name bold ellipsis">[웨이트로즈] 3.엑스트라 버진 상품</p>
+                            <p>700,000원</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/dummy/r-goods04.png" alt="레시피제품이미지4">
+                            <p class="food-name bold ellipsis">[웨이트로즈] 4.엑스트라 버진 상품</p>
+                            <p>1,900원</p>
+                        </li>
+                        <li>
+                            <img src="./assets/img/dummy/r-goods05.png" alt="레시피제품이미지5">
+                            <p class="food-name bold ellipsis">[웨이트로즈] 5.엑스트라 버진 상품</p>
+                            <p>70,900원</p>
+                        </li>
+                    </ul>
+                    <div class="food-btns">
+                        <a href="#" class="btn-prev hidden-text">이전 슬라이드 보기</a>
+                        <a href="#" class="btn-next hidden-text">다음 슬라이드 보기</a>
+                    </div>
+                </div>
+            </div><!-- //레시피 -->
+            <div class="full-bg">
+                <div class="box-1060">
+                    <div class="subtitle">
+                        <h2>파트너사<span class="subinfo"> | <a href="#">Kurly's partner</a></span></h2>
+                    </div>
+                    <div class="partners">
+                        <ul class="clearfix">
+                            <li><img src="./assets/img/banner/partners-banner1.png" alt="파트너사이미지1"></span></li>
+                            <li><img src="./assets/img/banner/partners-banner2.png" alt="파트너사이미지2"></li>
+                            <li><img src="./assets/img/banner/partners-banner3.png" alt="파트너사이미지3"></li>
+                            <li><img src="./assets/img/banner/partners-banner4.png" alt="파트너사이미지4"></li>
+                            <li><img src="./assets/img/banner/partners-banner5.png" alt="파트너사이미지5"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 리모컨 메뉴 -->
+        <div class="remote-area">
+            <div class="remote">
+                <ul>
+                    <li><a href="#">배송 안내</a></li>
+                    <li><a href="#">등급별 혜택</a></li>
+                    <li><a href="#">레시피</a></li>
+                    <li><a href="#">베스트 후기</a></li>
+                    <li><p class="icon-arrow-top"></p><a href="#">TOP</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 푸터 -->
+        <div class="box-1060 footer">
+            <div class="cs-info">
+                <p class="happy-call">고객행복센터<br/><span>1644-1107</span></p>
+                <ul class="cs-text">
+                    <li><span class="bold">주중</span> 오전9시~오후4시 <span class="bold">점심시간</span>오후12시~오후1시 <span class="bold">토요일</span> 오전9시~오후12시</li>
+                    <li>고객센터가 종료된 오후4시 이후와 일요일, 공휴일에는 1:1문의하기 게시판을 이용해 주세요.</li>
+                </ul>
+            </div>
+            <div class="cs-link">
+                <ul>
+                    <li><a class="bold color1" href="#">컬리소개</a></li>
+                    <li><a href="#">컬리영상소개</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리약관</a></li>
+                </ul>
+            </div>
+            <div class="flogo-area">
+                <img src="./assets/img/logo/kurly-logo-bw.jpg" alt="컬리흑백로고">
+                <p>법인명 (상호) : 주식회사 컬리 | 대표자 (성명) : 김슬아 대표 | 개인정보보호책임자 : 이ㄴ지훈 (<a href="mailto:help@kurlycorp.com" target="_blank">help@kurlycorp.com</a>)</p>
+                <p>사업자등록번호 : 261-81-23567 | 통신판매업 : 제 2018-서울강남-01646 호 | 입점문의 : <a href="https://docs.google.com/forms/d/1snV875C0U6NdFCCOWqV3VwH4UdwcxZYNVokqg1VKJa4/viewform?edit_requested=true" target="_blank">입점문의하기</a></p>
+                <p>마케팅제휴 : <a href="mailto:marketing@kurlycorp.com" target="_blank">marketing@kurlycorp.com</a> | 채용문의 : <a href="mailto:recruit@kurlycorp.com" target="_blank">recruit@kurlycorp.com</a> | 주소 : 서울특별시 도산대로 16길 20, 이래빌딩 B1~4F</p>
+                <p class="copyright">MARKET KURLY ALL RIGHT RESERVED</p>
+            </div>
+        </div><!-- //푸터 -->
+        <!-- 모달1 -->
+        <div class="modal active">
+            <div class="dimmed">
+                <div class="modal-layered">
+                    <div class="popup-banner">
+                        <a href="#"><img src="./assets/img/dummy/popup.png" alt="팝업이미지"></a>
+                        <div class="form-group">
+                            <label class="checkbox" checked>
+                                <input type="checkbox">
+                                <span class="label">오늘 하루 열지 않기</span> | 
+                            </label>
+                            <a class="btn-popup-close" href="#">창닫기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //모달 -->
+    </div>
+</body>
+</html>

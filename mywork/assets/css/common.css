@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+html, 
+html * {
+	padding: 0;
+	margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-y: scroll;
+    height: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 작업시 기본 body 세팅 */
+body {
+    font-family:'Nanum Gothic', '돋움', Dotum, '굴림', Gulim, Helvetica, sans-serif !important;    
+    font-size: 16px;
+    line-height:1.267em;
+    -webkit-text-size-adjust: none;
+    font-weight: 400;
+    letter-spacing:-0.07em;
+    -ms-word-break: keep-all;
+    word-break: keep-all;
+    background-color: #fff;
+    color: #333;
+}
+
+/* 공통 클래스 */
+.clearfix:before,
+.clearfix:after {
+    content: '\0020';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.hidden-text {
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.light {
+    font-weight: 300;
+}
+.normal {
+    font-weight: 400;
+}
+.bold {
+    font-weight: 700;
+}
+.bolder {
+    font-weight: 800;
+}
+
+.color1 {
+    color: #532076;
+}
+.ellipsis {
+    white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: fixed !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+    background-color: #1d60a7;
+    clip: auto !important;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: auto;
+    left:0;
+    right:0;
+    line-height: normal;
+    padding: 15px;
+    text-decoration: none;
+    top:0;
+    text-align: center;
+    width: auto;
+    z-index: 100000; /* Above WP toolbar */
+}
+
+.table-hidden {
+    height: 0;
+    overflow: hidden;
+}
+
+.label-hidden {
+    visibility: hidden;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
